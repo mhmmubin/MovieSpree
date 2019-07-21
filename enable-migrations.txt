@@ -1,0 +1,3 @@
+ Enable-Migrations -StartUpProjectName Vidly -ContextTypeName Vidly.Models.MyDbContext -Verbose
+
+https://stackoverflow.com/questions/44747032/no-context-type-was-found-in-the-assembly-when-running-code-first-migration
