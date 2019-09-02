@@ -29,7 +29,7 @@ namespace MovieSpree.ViewModel
         [Range(1, 20)]
         [Required]
         public byte? NumberInStock { get; set; }
-
+        
         public string Title
         {
             get

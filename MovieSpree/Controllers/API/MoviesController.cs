@@ -4,7 +4,8 @@ using MovieSpree.Models;
 using System;
 using System.Data.Entity;
 using System.Collections.Generic;
-using System.Linq;
+using System.Linq;                                  /********************** Movies API Controller 
+                                                            ************************/
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
@@ -20,12 +21,20 @@ namespace MovieSpree.Controllers.API
             _context = new ApplicationDbContext();
         }
 
-        public IEnumerable<MovieDto> GetMovies()
+        public IHttpActionResult GetMovies(string query = null)
         {
-            return _context.Movies
+            var moviesQuery = _context.Movies
                 .Include(m => m.Genre)
+                .Where(m => m.NumberAvailable >= 0);
+
+            if (!String.IsNullOrWhiteSpace(query))
+                moviesQuery = moviesQuery.Where(m => m.Name.Contains(query));
+
+            var movieDtos = moviesQuery
                 .ToList()
                 .Select(Mapper.Map<Movie, MovieDto>);
+
+            return Ok(movieDtos);
         }
 
         public IHttpActionResult GetMovie(int id)

@@ -54,9 +54,9 @@ namespace MovieSpree
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "475487909678513",
+               appSecret: "fab3a1888b4d79cd180195c9e801a658");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{

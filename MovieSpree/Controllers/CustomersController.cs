@@ -39,7 +39,7 @@ namespace MovieSpree.Controllers
             return View("CustomerForm", viewModel);
         }
 
-        //to aedit a customer
+        //to edit a customer
         public ActionResult Edit(int id)
         {
             var customer = _context.Customers.SingleOrDefault(c => c.Id == id);

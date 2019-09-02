@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace MovieSpree.Controllers
 {
+    [AllowAnonymous]
     public class HomeController : Controller
     {
         public ActionResult Index()
@@ -15,6 +16,8 @@ namespace MovieSpree.Controllers
 
         public ActionResult About()
         {
+            throw new Exception();
+
             ViewBag.Message = "Your application description page.";
 
             return View();

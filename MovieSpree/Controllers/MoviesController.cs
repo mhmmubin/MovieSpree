@@ -9,6 +9,7 @@ using MovieSpree.ViewModel;
 
 namespace MovieSpree.Controllers
 {
+    [Authorize(Roles = RoleName.CanManageMovies)]
     public class MoviesController : Controller
     {
         private ApplicationDbContext _context;
@@ -25,7 +26,9 @@ namespace MovieSpree.Controllers
         // to view list of Movies
         public ViewResult Index()
         {
-            return View();
+            if (User.IsInRole(RoleName.CanManageMovies))
+                return View("Index");
+            return View("ReadOnlyList");
         }
 
         //to view details of a movie

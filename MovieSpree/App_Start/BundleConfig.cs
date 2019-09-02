@@ -14,7 +14,9 @@ namespace MovieSpree
                         "~/scripts/bootbox.js",
                         "~/Scripts/respond.js",
                         "~/scripts/datatables/jquery.dataTables.js",
-                        "~/scripts/datatables/dataTables.bootstrap4.js"));
+                        "~/scripts/datatables/dataTables.bootstrap4.js",
+                        "~/scripts/toastr.js",
+                        "~/scripts/typeahead.bundle.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -26,8 +28,10 @@ namespace MovieSpree
 
            
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap-superhero.css",
+                      "~/Content/bootstrap-slate.css",
                       "~/content/datatables/css/dataTables.bootstrap4.css",
+                      "~/content/typeahead.css",
+                      "~/content/toastr.css",
                       "~/Content/site.css"));
         }
     }
