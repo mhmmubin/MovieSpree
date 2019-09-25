@@ -4,7 +4,9 @@ MVC5 Application
 ## Razor Views 
 ## Entity Framework (Code First Migration)
 ## Social Media Login (OAuth)
-## Restful API Admin/ General Staff Authentication 
+## Restful API 
+## Admin/ General Staff Authentication 
+## jQuery plug-in (Bootbox, Data Table, Toast Notification)
 ## Anti-Forgery token. 
 ## DTO's is in use to increase robustness of application. 
 ## Business rules for Movies and Customers
